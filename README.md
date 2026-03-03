@@ -3,6 +3,10 @@
 #### Gukjin Lee, M.D., Ph.D.§, Sang-Hyuk Jung, Ph.D.§, Jonghyun Lee, Ph.D., Ki Won Moon, M.D., Ph.D., Penn Medicine Biobank, Jae-Seung Yun, M.D., Ph.D.**, Dokyoon Kim, Ph.D.**
 ---
 
+### Ethics approval and consent to participate
+
+This study complies with all relevant ethical regulations for research involving human participants. It was conducted in accordance with the criteria set by the Declaration of Helsinki. The UK Biobank (UKBB) was approved by the National Research Ethics Committee (June 17, 2011 [RES reference 11/NW/0382]; extended on May 10, 2016 [RES reference 16/NW/0274]). The present research using the UKBB Resource was approved under Application Number 90981. The collection, storage, and analysis of biospecimens, genetic data, and data derived from electronic health records as part of the Penn Medicine Biobank (PMBB) were approved under University of Pennsylvania IRB protocol #813913. Participants from the UKBB and PMBB provided written informed consent allowing use of their samples and data for medical research purposes.
+
 ## Biobank Standard Operating Procedures (SOPs)
 
 Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample handling.
