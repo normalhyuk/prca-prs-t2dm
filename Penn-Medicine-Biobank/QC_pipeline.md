@@ -30,7 +30,6 @@ pmbb_t2dm <- fread([PMBB_T2DM_PATH])       # Baseline T2DM (ICD9/10 + labs)
 
 # Baseline: first clinical encounter (median ~2010)
 baseline_date_pmbb <- as.Date([PMBB_BASELINE_DATE])  # e.g., "2010-01-01"
-censor_date_pmbb <- as.Date("2020-07-01")
 
 # STEP 1: Genotype availability (GSA array)
 pmbb_pheno <- pmbb_pheno %>% 
