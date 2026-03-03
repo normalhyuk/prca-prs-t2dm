@@ -4,6 +4,31 @@
 ---
 
 ### 
+# Biobank Standard Operating Procedures (SOPs)
+
+Operational procedures for UK Biobank and Penn Medicine BioBank (PMBB) sample handling.
+
+## UK Biobank
+- **Official Access**: [UK Biobank Data Access](https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/)
+- **Blood Processing**: UK Biobank Blood Sample Manual [web:77]
+- **Biospecimens**: UK Biobank Biospecimens Manual [web:78]
+
+## Penn Medicine BioBank (PMBB)
+- **Official Access**: [PMBB Data Access](https://pmbb.med.upenn.edu/data-access/index.php)
+- **Primary Protocol**: [PMBB Genomics Paper](https://www.mdpi.com/2075-4426/12/12/1974) [web:92]
+- **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf) [web:86]
+- **Imputation QC**: [Ritchie Lab PMBB QC](https://ritchielab.org/pmbb-imputation-docs/#pre-imputation-qc-on-study-data)
+
+## SOP Documents
+### UK Biobank
+- [Sample Collection](UK-Biobank/SOP_sample_collection.md)
+- [Sample Processing](UK-Biobank/SOP_sample_processing.md)
+- [Storage & QC](UK-Biobank/SOP_storage_qc.md)
+
+### Penn Medicine BioBank
+- [Sample Collection](Penn-Medicine-Biobank/SOP_sample_collection.md)
+- [Sample Processing](Penn-Medicine-Biobank/SOP_sample_processing.md)
+- [Storage & QC](Penn-Medicine-Biobank/SOP_storage_qc.md)
 
 
 ### Acknowledgements
