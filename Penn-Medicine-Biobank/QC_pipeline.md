@@ -69,12 +69,3 @@ fwrite(pmbb_pheno, [PMBB_CLEANED_COHORT_PATH], row.names = FALSE)
 cat("PMBB Final N:", nrow(pmbb_pheno), "\n")
 cat("EUR:", nrow(pmbb_pheno[ancestry_category == "Non-Hispanic European",]), "\n")
 cat("AA: ", nrow(pmbb_pheno[ancestry_category == "African American",]), "\n")
-
-Configuration Variables
-Variable	Example Value	Description
-[PMBB_PHENO_PATH]	"pmbb_pheno_v1.csv"	Main EHR phenotype file
-[PMBB_PCA_PATH]	"pmbb_pca_eur_aa.txt"	Ancestry principal components
-[KING_2ND_THRESH]	0.0884	2nd-degree kinship cutoff
-[PMBB_BASELINE_DATE]	"2010-01-01"	Median first encounter
-[PMBB_CLEANED_COHORT_PATH]	"pmbb_males_cleaned.csv"	Final cohort
-
