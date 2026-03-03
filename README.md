@@ -21,7 +21,7 @@ Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample ha
 - **Primary Protocol**: [PMBB Genomics Paper](https://www.mdpi.com/2075-4426/12/12/1974)
 - **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf)
 - **Imputation QC**: [Ritchie Lab PMBB QC](https://ritchielab.org/pmbb-imputation-docs/#pre-imputation-qc-on-study-data)
-※ Access is required to provide detailed information.
+- ※ Access is required to provide detailed information.
 
 ### SOP Documents (Additional)
 #### UK Biobank
