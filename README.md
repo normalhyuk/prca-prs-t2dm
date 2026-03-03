@@ -21,13 +21,13 @@ Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample ha
 ### SOP Documents
 #### UK Biobank
 - [Sample Collection](UK-Biobank/SOP_sample_collection.md)
-- [Sample Processing](UK-Biobank/SOP_sample_processing.md)
-- [Storage & QC](UK-Biobank/SOP_storage_qc.md)
+- [Sample Processing](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/Bloodsample.pdf)
+- [Study Quality Control (R-script)](UK-Biobank/SOP_qc.md)
 
 #### Penn Medicine BioBank
 - [Sample Collection](Penn-Medicine-Biobank/SOP_sample_collection.md)
 - [Sample Processing](Penn-Medicine-Biobank/SOP_sample_processing.md)
-- [Storage & QC](Penn-Medicine-Biobank/SOP_storage_qc.md)
+- [Study Quality Control (R-script)](Penn-Medicine-Biobank/SOP_qc.md)
 
 
 ### Acknowledgements
