@@ -9,10 +9,10 @@ Operational procedures for UK Biobank and Penn Medicine BioBank (PMBB) sample ha
 
 ### UK Biobank
 - **Official Access**: [UK Biobank Data Access](https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/)
-- **Blood Processing**: UK Biobank Blood Sample Manual [web:77]
-- **Biospecimens**: UK Biobank Biospecimens Manual [web:78]
+- **Blood Processing**: [UK Biobank Blood Sample Manual](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/Bloodsample.pdf)
+- **Biospecimens**: [UK Biobank Biospecimens Manual](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/BioSampleProc.pdf)
 
-### Penn Medicine BioBank (PMBB)
+### Penn Medicine Biobank (PMBB)
 - **Official Access**: [PMBB Data Access](https://pmbb.med.upenn.edu/data-access/index.php)
 - **Primary Protocol**: [PMBB Genomics Paper](https://www.mdpi.com/2075-4426/12/12/1974) [web:92]
 - **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf) [web:86]
@@ -28,6 +28,21 @@ Operational procedures for UK Biobank and Penn Medicine BioBank (PMBB) sample ha
 - [Sample Collection](Penn-Medicine-Biobank/SOP_sample_collection.md)
 - [Sample Processing](Penn-Medicine-Biobank/SOP_sample_processing.md)
 - [Storage & QC](Penn-Medicine-Biobank/SOP_storage_qc.md)
+
+## Bibliography
+
+### UK Biobank
+[web:77] Blood Sample Collection Manual. https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/Bloodsample.pdf
+[web:78] Biospecimens Processing Manual. https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/BioSampleProc.pdf
+UKB Access. https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/
+
+### Penn Medicine BioBank
+[web:86] PMBB Informed Consent v12. https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf
+[web:92] PMBB Protocol (JPM 2022). https://www.mdpi.com/2075-4426/12/12/1974
+PMBB Access. https://pmbb.med.upenn.edu/data-access/index.php
+PMBB QC. https://ritchielab.org/pmbb-imputation-docs/#pre-imputation-qc-on-study-data
+
+
 
 
 ### Acknowledgements
