@@ -1,13 +1,16 @@
-## UKBB Study Criteria
-## Target: 130,950 White-British males, aged 40-69, no prevalent PrCa/T2DM, ≥1yr follow-up
-## Genotyping: v3 (March 2018), Affymetrix UK BiLEVE/UKBB arrays
+### UKBB Study Criteria
+#### Target: 130,950 White-British males, aged 40-69, no prevalent PrCa/T2DM, ≥1yr follow-up
+#### Genotyping: v3 (March 2018), Affymetrix UK BiLEVE/UKBB arrays
+#### Application: #90981
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(dplyr)
 library(data.table)
 library(ukbtools)
 library(lubridate)
 
-# === UK BIOBANK QC PIPELINE ===
+# === UK BIOBANK QC PIPELINE (Application #90981) ===
 
 # Load core datasets - REPLACE WITH YOUR FILE PATHS
 pheno <- ukb_df_read([PHENO_FILE_PATH])  # ukbXXXX.enc_ukb (fields 31,34,20001,20002...)
@@ -59,12 +62,3 @@ pheno <- pheno %>%
 # FINAL OUTPUT: 130,950 White-British males
 fwrite(pheno, [UKB_CLEANED_COHORT_PATH], row.names = FALSE)
 cat("UKBB Final N:", nrow(pheno), "White-British males\n")
-
-Configuration Variables
-Variable	Example Value	Description
-[PHENO_FILE_PATH]	"ukb47230.enc_ukb"	Main phenotype file
-[PCA_FILE_PATH]	"ukb_pca_v2.txt"	40 principal components
-[KING_2ND_THRESH]	0.0884	2nd-degree kinship cutoff
-[PC1_MIN_WB]	-0.01	White British PC1 minimum
-[PC1_MAX_WB]	0.02	White British PC1 maximum
-[UKB_CLEANED_COHORT_PATH]	"ukbb_males_cleaned_90981.csv"	Final cohort
