@@ -39,9 +39,3 @@ We thank all participants who contributed their data to the UK Biobank study. We
 
 ### Availability of data and materials
 > The PrCa PRS model used in the current paper is available from the PGS Catalog (https://www.pgscatalog.org/score/PGS000662/).
-
-
-## References
-1.	Ge, Tian, et al. "Polygenic prediction via Bayesian regression and continuous shrinkage priors." _Nature communications_ **10.1** (2019): 1776.
-2.	Ruan, Yunfeng, et al. "Improving polygenic prediction in ancestrally diverse populations." _Nature genetics_ **54.5** (2022): 573-580.
-3.	Chang, Christopher C., et al. "Second-generation PLINK: rising to the challenge of larger and richer datasets." _Gigascience_ **4.1** (2015): s13742-015.
