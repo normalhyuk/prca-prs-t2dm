@@ -22,7 +22,7 @@ Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample ha
 - **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf)
 - **Imputation QC**: [Ritchie Lab PMBB QC](https://ritchielab.org/pmbb-imputation-docs/#pre-imputation-qc-on-study-data)
 
-### SOP Documents
+### SOP Documents (Additional)
 #### UK Biobank
 - [Sample Collection](UK-Biobank/SOP_sample_collection.md)
 - [Sample Processing](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/Bloodsample.pdf)
