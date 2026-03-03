@@ -7,7 +7,7 @@
 
 This study complies with all relevant ethical regulations for research involving human participants. It was conducted in accordance with the criteria set by the Declaration of Helsinki. The UK Biobank was approved by the National Research Ethics Committee (June 17, 2011 [RES reference 11/NW/0382]; extended on May 10, 2016 [RES reference 16/NW/0274]). The present research using the UKBB Resource was approved under Application Number 90981. The collection, storage, and analysis of biospecimens, genetic data, and data derived from electronic health records as part of the Penn Medicine Biobank were approved under University of Pennsylvania IRB protocol #813913. Participants from the UKBB and PMBB provided written informed consent allowing use of their samples and data for medical research purposes.
 
-## Biobank Standard Operating Procedures (SOPs)
+## Biobank Standard Operating Procedures Documents
 
 Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample handling.
 
@@ -22,17 +22,6 @@ Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample ha
 - **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf)
 - **Imputation QC**: [Ritchie Lab PMBB QC](https://ritchielab.org/pmbb-imputation-docs/#pre-imputation-qc-on-study-data)
 - ※ Access is required to provide detailed information.
-
-### SOP Documents (Additional)
-#### UK Biobank
-- [Sample Collection](UK-Biobank/SOP_sample_collection.md)
-- [Sample Processing](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/Bloodsample.pdf)
-- [Quality Control Pipeline (R-script)](UK-Biobank/QC_pipeline.md)
-
-#### Penn Medicine BioBank
-- [Sample Collection](Penn-Medicine-Biobank/SOP_sample_collection.md)
-- [Sample Processing](Penn-Medicine-Biobank/SOP_sample_processing.md)
-- [Quality Control Pipeline (R-script)](Penn-Medicine-Biobank/QC_pipeline.md)
 
 
 ### Acknowledgements
