@@ -5,14 +5,14 @@
 
 ## Biobank Standard Operating Procedures (SOPs)
 
-Operational procedures for UK Biobank and Penn Medicine BioBank (PMBB) sample handling.
+Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample handling.
 
 ### UK Biobank
 - **Official Access**: [UK Biobank Data Access](https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/)
 - **Blood Processing**: [UK Biobank Blood Sample Manual](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/Bloodsample.pdf)
 - **Biospecimens**: [UK Biobank Biospecimens Manual](https://biobank.ndph.ox.ac.uk/ukb/ukb/docs/BioSampleProc.pdf)
 
-### Penn Medicine Biobank (PMBB)
+### Penn Medicine Biobank
 - **Official Access**: [PMBB Data Access](https://pmbb.med.upenn.edu/data-access/index.php)
 - **Primary Protocol**: [PMBB Genomics Paper](https://www.mdpi.com/2075-4426/12/12/1974)
 - **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf)
