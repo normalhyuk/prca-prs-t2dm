@@ -1,0 +1,49 @@
+---
+title: "Biobank QC Pipeline: UKBB & PMBB"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(dplyr)
+library(data.table)
+library(ukbtools)
+
+# Load UKBB data (replace with your paths)
+pheno <- ukb_df_read([PHENO_FILE_PATH])  # Field 0,31,34,...
+pca <- fread([PCA_FILE_PATH])            # UKBB PCA
+king <- fread([KING_KIN_FILE_PATH])      # king_cutoff.txt
+cancer_status <- fread([CANCER_FILE_PATH])  # ICD10 codes
+
+# 1. Remove samples without genotype data
+genotype_qc <- fread([UKB_GENOTYPE_QC_PATH])  # has_genotype flag
+pheno <- pheno %>% filter(sample.ID %in% genotype_qc$eid[genotype_qc$has_genotype == 1])
+
+# 2. White British ancestry only (PCA-based)
+pheno <- pheno %>% 
+  left_join(pca, by = "eid") %>%
+  filter(genetic_principal_components.f22009_0_0 >= [PCA_PC1_MIN] & 
+         genetic_principal_components.f22009_0_0 <= [PCA_PC1_MAX] &
+         genetic_sex.f22001_0_0 == 0)  # White British cluster
+
+# 3. Sex mismatch removal
+pheno <- pheno %>% filter([SEX_FIELD] == genetic_sex.f22001_0_0)
+
+# 4. Remove 2nd-degree relatives (King kinship > 0.0884)
+related <- king %>% filter(kinship > [KING_THRESH_2ND]) %>% pull(fid)
+pheno <- pheno %>% filter(!eid %in% related)
+
+# 5. Remove women + prevalent cancer
+pheno <- pheno %>% 
+  filter([SEX_FIELD] == 1) %>%  # Men only
+  anti_join(cancer_status, by = "eid")  # No cancer diagnosis
+
+# 6. Middle-aged men (40-65 years)
+pheno <- pheno %>% 
+  filter(year_of_birth.f34_0_0 >= [AGE_MIN_YOB] & 
+         year_of_birth.f34_0_0 <= [AGE_MAX_YOB])
+
+# Save cleaned cohort
+fwrite(pheno, [CLEANED_UKB_FILE], row.names = FALSE)
+cat("UKBB QC complete:", nrow(pheno), "samples retained\n")
