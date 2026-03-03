@@ -14,7 +14,7 @@ library(ukbtools)
 pheno <- ukb_df_read([PHENO_FILE_PATH])  # Field 0,31,34,...
 pca <- fread([PCA_FILE_PATH])            # UKBB PCA
 king <- fread([KING_KIN_FILE_PATH])      # king_cutoff.txt
-cancer_status <- fread([CANCER_FILE_PATH])  # ICD10 codes
+cancer_status <- fread([CANCER_FILE_PATH])  # ICD9 and 10 codes
 
 # 1. Remove samples without genotype data
 genotype_qc <- fread([UKB_GENOTYPE_QC_PATH])  # has_genotype flag
@@ -39,7 +39,7 @@ pheno <- pheno %>%
   filter([SEX_FIELD] == 1) %>%  # Men only
   anti_join(cancer_status, by = "eid")  # No cancer diagnosis
 
-# 6. Middle-aged men (40-65 years)
+# 6. Middle-aged men (40-69 years)
 pheno <- pheno %>% 
   filter(year_of_birth.f34_0_0 >= [AGE_MIN_YOB] & 
          year_of_birth.f34_0_0 <= [AGE_MAX_YOB])
