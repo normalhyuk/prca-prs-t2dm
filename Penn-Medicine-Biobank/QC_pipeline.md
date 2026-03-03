@@ -1,9 +1,9 @@
-## Penn Medicine BioBank QC Pipeline (`PMBB_QC.Rmd`)
+## Penn Medicine Biobank QC Pipeline
 
-#PMBB Study Criteria
-#Target: 17,970 males (14,279 Non-Hispanic EUR + 3,691 AA)
-#Genotyping: GSA array (43,623 total samples)
-#EHR: Median 7.0y coverage to July 2020, IRB #813913
+#### PMBB Study Criteria
+#### Target: 17,970 males (14,279 Non-Hispanic EUR + 3,691 AA)
+#### Genotyping: GSA array (43,623 total samples)
+#### EHR: Median 7.0y coverage to July 2020, IRB #813913
 
 ```markdown
 ---
@@ -16,8 +16,6 @@ output:
     toc_float: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(dplyr)
 library(data.table)
 
