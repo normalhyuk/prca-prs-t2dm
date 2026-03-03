@@ -39,11 +39,21 @@ genotype_qc <- fread([UKB_GENOTYPE_QC_PATH])  # genetic_showcase.results
 pheno <- pheno %>% 
   filter(eid %in% genotype_qc$eid[genotype_qc$genotyping_array == 1])
 
-# STEP 2: White-British ancestry (PCA cluster 1)
+# STEP 2: White-British ancestry (PCA + self-reported ethnicity)
+# Using official UKBB pan-UKBB reference panel cluster 1 (Field 22006)
 pheno <- pheno %>% 
-  left_join(pca %>% select(eid, PC1 = genetic_principal_components.f22009_0_0), 
+  # Join 40 PCs + self-reported ethnicity (Field 22006)
+  left_join(pca %>% select(eid, PC1 = genetic_principal_components.f22009_0_0,
+                          ethnicity_self = ethnicity_grouping.f22006_0_0), 
             by = "eid") %>%
-  filter(PC1 >= [PC1_MIN_WB] & PC1 <= [PC1_MAX_WB])  # e.g., -0.01 to 0.02
+  
+  # White-British: PCA cluster 1 (pan-UKBB reference) + self-reported British
+  # https://pan.ukbb.broadinstitute.org/docs/qc
+  filter(ethnicity_self %in% c("British", "Irish", "White")) %>%  # Field 22006
+  filter(PC1 >= [PC1_MIN_WB] & PC1 <= [PC1_MAX_WB]) %>%          # e.g., -0.01 to 0.02
+  filter(PC2 >= [PC2_MIN_WB] & PC2 <= [PC2_MAX_WB])              # Additional PC2 refinement
+
+# Reference: UKBB Showcase Field 22006 + genetic_principal_components.f22009_0_0
 
 # STEP 3: Sex mismatch + males only
 pheno <- pheno %>% 
