@@ -1,25 +1,13 @@
----
-title: "UK Biobank QC Pipeline - Prostate Cancer Study"
-author: "[Your Name]"
-date: "`r Sys.Date()`"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
----
+## UKBB Study Criteria
+## Target: 130,950 White-British males, aged 40-69, no prevalent PrCa/T2DM, ≥1yr follow-up
+## Genotyping: v3 (March 2018), Affymetrix UK BiLEVE/UKBB arrays
 
-#UKBB Study Criteria
-#Target: 130,950 White-British males, aged 40-69, no prevalent PrCa/T2DM, ≥1yr follow-up
-#Genotyping: v3 (March 2018), Affymetrix UK BiLEVE/UKBB arrays
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(dplyr)
 library(data.table)
 library(ukbtools)
 library(lubridate)
 
-# === UK BIOBANK QC PIPELINE (Application #90981) ===
+# === UK BIOBANK QC PIPELINE ===
 
 # Load core datasets - REPLACE WITH YOUR FILE PATHS
 pheno <- ukb_df_read([PHENO_FILE_PATH])  # ukbXXXX.enc_ukb (fields 31,34,20001,20002...)
