@@ -1,0 +1,45 @@
+---
+title: "Biobank QC Pipeline: UKBB & PMBB"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(dplyr)
+library(data.table)
+library(ukbtools)
+
+# Load PMBB data
+pmbb_pheno <- fread([PMBB_PHENO_FILE_PATH])
+pmbb_pca <- fread([PMBB_PCA_FILE_PATH])
+king_pmbb <- fread([PMBB_KING_FILE_PATH])
+pmbb_cancer <- fread([PMBB_CANCER_FILE_PATH])
+
+# 1. Remove samples without genotype data
+pmbb_pheno <- pmbb_pheno %>% filter(!is.na(genotype_id))
+
+# 2. Non-Hispanic European OR African American only
+pmbb_pheno <- pmbb_pheno %>% 
+  filter(ancestry_category %in% c("Non-Hispanic European", "African American"))
+
+# 3. Sex mismatch removal  
+pmbb_pheno <- pmbb_pheno %>% 
+  filter(phenotypic_sex == genetic_sex)
+
+# 4. Remove 2nd-degree relatives (King kinship > 0.0884)
+related_pmbb <- king_pmbb %>% filter(kinship > [KING_THRESH_2ND]) %>% pull(IID)
+pmbb_pheno <- pmbb_pheno %>% filter(!sample_id %in% related_pmbb)
+
+# 5. Remove women + prevalent cancer cases
+pmbb_pheno <- pmbb_pheno %>% 
+  filter(phenotypic_sex == "Male") %>%
+  anti_join(pmbb_cancer, by = "sample_id")
+
+# 6. Middle-aged men (age 40-65 at collection)
+pmbb_pheno <- pmbb_pheno %>% 
+  filter(sample_age >= [AGE_MIN] & sample_age <= [AGE_MAX])
+
+# Save cleaned cohort
+fwrite(pmbb_pheno, [CLEANED_PMBB_FILE], row.names = FALSE)
+cat("PMBB QC complete:", nrow(pmbb_pheno), "samples retained\n")
