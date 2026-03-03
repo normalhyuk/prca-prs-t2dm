@@ -1,10 +1,21 @@
-### UKBB Study Criteria
+## UK Biobank QC Pipeline
+
+#### UKBB Study Criteria
 #### Target: 130,950 White-British males, aged 40-69, no prevalent PrCa/T2DM, ≥1yr follow-up
 #### Genotyping: v3 (March 2018), Affymetrix UK BiLEVE/UKBB arrays
 #### Application: #90981
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```markdown
+---
+title: "UK Biobank QC Pipeline - Prostate Cancer Study"
+author: "[Your Name]"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
 library(dplyr)
 library(data.table)
 library(ukbtools)
