@@ -20,7 +20,7 @@ Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample ha
 - **Official Access**: [PMBB Data Access](https://pmbb.med.upenn.edu/investigators.php)
 - **Primary Protocol**: [PMBB Protocol Paper](https://www.mdpi.com/2075-4426/12/12/1974)
 - **Consent Form**: [PMBB Informed Consent v12](https://pmbb.med.upenn.edu/documents/informed_consent_v12.pdf)
-#### ※ Access is required to provide detailed information.
+※ Access is required to provide detailed information.
 
 
 ### Acknowledgements
