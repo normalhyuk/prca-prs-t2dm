@@ -28,4 +28,4 @@ Operational procedures for UK Biobank and Penn Medicine Biobank (PMBB) sample ha
 We thank all participants who contributed their data to the UK Biobank study. We also acknowledge the Penn Medicine Biobank for providing data and thank patients of Penn Medicine who consented to participate in this research program. We would like to thank the Penn Medicine Biobank team and Regeneron Genetics Center for providing genetic variant data for analysis.
 
 ### Availability of data and materials
-> The PrCa PRS model used in the current paper is available from the PGS Catalog (https://www.pgscatalog.org/score/PGS000662/).
+> The PrCa PRS model used in the current paper is available from the PGS Catalog (https://www.pgscatalog.org/score/PGS000662/). Biobank operational procedures are documented at https://github.com/normalhyuk/prca-prs-t2dm.
